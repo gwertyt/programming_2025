@@ -7,7 +7,6 @@ int main(){
 
     short A;
     int i;
-    int l;
 
     std::cin >> A >> i;
     std::bitset<8> binA(A);
@@ -19,14 +18,14 @@ int main(){
         int number1, number2;
         std::cin >> number1 >> number2;
 
-        if (number1 % number2 == 0) {
-            std::cout << number1 / number2 << std::endl; //вывод 1/2
+        if (number1 == 0 || number2 == 0) {
+            std::cout << number2 * number1 << std::endl; //если одно из чисел 0
         }
+        else if (number1 % number2 == 0) {
+            std::cout << number1 / number2 << std::endl; //вывод 1/2
+        }    
         else if (number2 % number1 == 0) {
             std::cout << number2 / number1 << std::endl; //вывод 2/1
-        }
-        else if (number1 == 0 || number2 == 0) {
-            std::cout << number2 * number1 << std::endl; //если одно тз чисел 0
         }
         else {
             std::cout << number2 * number1 << std::endl; //произведение
@@ -34,16 +33,13 @@ int main(){
     }
     else {
         short res = A;
-        if (i == 0) {
+        if (i + 1 <= 7) {
             res = res ^ (1 << (i + 1));
         }
-        else if (i == 7) {
+        if (i - 1 >= 0) {
             res = res ^ (1 << (i - 1));
         }
-        else {
-            res = res ^ (1 << (i + 1)) | (1 << (i - 1));
-        }
-
+       
         std::bitset<8> bin_res(res);
         std::cout << res << "=" << bin_res << std::endl;
     }
@@ -75,4 +71,5 @@ int main(){
     return 0;
 }
 */
+
 
