@@ -18,17 +18,18 @@ int main(){
         int number1, number2;
         std::cin >> number1 >> number2;
 
-        if (number1 == 0 || number2 == 0) {
-            std::cout << number2 * number1 << std::endl; //если одно из чисел 0
+        if number2 != 0 {
+            if (number1 % number2 == 0) || (number1 == 0) {
+                std::cout << number1 / number2 << std::endl; //вывод 1/2
+            }    
         }
-        else if (number1 % number2 == 0) {
-            std::cout << number1 / number2 << std::endl; //вывод 1/2
-        }    
-        else if (number2 % number1 == 0) {
-            std::cout << number2 / number1 << std::endl; //вывод 2/1
+        else if number1 != 0 {
+            if (number2 % number1 == 0) || (number2 == 0) {
+                std::cout << number2 / number1 << std::endl; //вывод 2/1
+            }
         }
         else {
-            std::cout << number2 * number1 << std::endl; //произведение
+            std::cout << number1 * number2 << std::endl; //произведение
         }
     }
     else {
@@ -71,5 +72,6 @@ int main(){
     return 0;
 }
 */
+
 
 
