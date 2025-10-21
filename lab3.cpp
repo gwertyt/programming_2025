@@ -1,0 +1,78 @@
+﻿#include <iostream>
+#include <limits>
+#include <cmath>
+/*
+int main(){
+
+    int n;
+    std::cin >> n; //кол-во чисел в послед-ти
+    
+    if (n <= 0) {
+        std::cout << "не верно" << std::endl;
+        return 0;
+    }
+
+    double summa = 0.0;
+    double maxn = -std::numeric_limits<double>::max();
+    int maxi = -1;
+
+    std::cout << n << std::endl;
+
+    for (int i = 1; i <= n; i++) {
+        double number;
+        std::cin >> number;
+
+        if (number <= -0.36 || number > 10.1) {
+            continue;
+        }
+
+        summa += number;
+
+        if (number > maxn) {
+            maxn = n;
+            maxi = i;
+        }
+    }
+
+    if (maxi == -1) {
+        std::cout << "Нет чисел из промежутка" << std::endl;
+    }
+    else {
+        std::cout << summa << std::endl; //вывод сумма
+        std::cout << maxn << std::endl; //вывод максимальное число
+        std::cout << maxi << std::endl; //вывод индекс максимального числа
+    }
+
+    return 0;
+}
+*/
+
+int main() {
+
+    int a;
+    std::cin >> a;
+
+    if (a >= 1000 || a <= -1000) {
+        std::cout << "Неверное число" << std::endl;
+        return 1;
+    }
+
+    int number1 = abs(a);
+    int result = 1;
+
+    if (number1 == 0) {
+        result = 0;
+    }
+    else {
+        while (number1 > 0) {
+            int digit = number1 % 10;
+            result *= digit;
+            number1 /= 10;
+        }
+    }
+
+    std::cout << result << std::endl;
+
+    return 0;
+
+}
