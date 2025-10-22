@@ -1,12 +1,13 @@
-﻿#include <iostream>
+#include <iostream>
 #include <limits>
 #include <cmath>
-/*
-int main(){
+
+int main() {
 
     int n;
+    std::cout << "Count of numbers " << std::endl;
     std::cin >> n; //кол-во чисел в послед-ти
-    
+
     if (n <= 0) {
         std::cout << "не верно" << std::endl;
         return 0;
@@ -15,8 +16,6 @@ int main(){
     double summa = 0.0;
     double maxn = -std::numeric_limits<double>::max();
     int maxi = -1;
-
-    std::cout << n << std::endl;
 
     for (int i = 1; i <= n; i++) {
         double number;
@@ -29,7 +28,7 @@ int main(){
         summa += number;
 
         if (number > maxn) {
-            maxn = n;
+            maxn = number;
             maxi = i;
         }
     }
@@ -38,15 +37,16 @@ int main(){
         std::cout << "Нет чисел из промежутка" << std::endl;
     }
     else {
-        std::cout << summa << std::endl; //вывод сумма
-        std::cout << maxn << std::endl; //вывод максимальное число
-        std::cout << maxi << std::endl; //вывод индекс максимального числа
+        std::cout << "Summa " << summa << std::endl; //вывод сумма
+        std::cout << "Max number " << maxn << std::endl; //вывод максимальное число
+        std::cout << "Index max number " << maxi << std::endl; //вывод индекс максимального числа
     }
 
     return 0;
 }
-*/
 
+
+/*
 int main() {
 
     int a;
@@ -76,3 +76,5 @@ int main() {
     return 0;
 
 }
+
+*/
