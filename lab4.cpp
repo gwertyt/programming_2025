@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 
 using namespace std;
-/*
+
+
 int main(){
 
 	const int sizemas = 6;
@@ -39,7 +40,8 @@ int main(){
 	return 0;
 }
 
-*/
+
+
 
 
 int main() {
@@ -79,4 +81,5 @@ int main() {
 	}
 
 	return 0;
+
 }
