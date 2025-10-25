@@ -46,7 +46,9 @@ int main() {
 }
 
 
-/*
+
+
+
 int main() {
 
     int a;
@@ -77,4 +79,5 @@ int main() {
 
 }
 
-*/
+
+
