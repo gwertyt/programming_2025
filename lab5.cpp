@@ -1,10 +1,10 @@
-﻿#include <iostream>
+#include <iostream>
 
 using namespace std;
 
-int twonumber(int a, int b) {
-	cout << "использована функция для 2х чисел" << endl;
-	
+int function(int a, int b) {
+    cout << "использована функция для 2х чисел" << endl;
+
     if (a % b == 0) {
         return a / b;
     }
@@ -16,7 +16,7 @@ int twonumber(int a, int b) {
     }
 }
 
-int threenumber(int a, int b, int c) {
+int function(int a, int b, int c) {
     cout << "использована функция для 3х чисел" << endl;
 
     if (a == b && b == c) {
@@ -29,9 +29,9 @@ int threenumber(int a, int b, int c) {
 
 void calculations(int a, int b) {
     cout << "использована функция операций для чисел" << endl;
-    cout << a + b << endl;      
-    cout << a - b << endl;      
-    cout << b - a << endl;      
+    cout << a + b << endl;
+    cout << a - b << endl;
+    cout << b - a << endl;
     cout << a * b << endl;
     if (b != 0) {
         cout << (double(a) / b) << endl;
@@ -88,13 +88,13 @@ int main() {
                 a = n2, b = n3;
             }
 
-            res = twonumber(a, b);
+            res = function(a, b);
             cout << res << endl;
         }
 
 
-        else if (ct==3) {
-            res = threenumber(n1, n2, n3);
+        else if (ct == 3) {
+            res = function(n1, n2, n3);
             cout << res << endl;
         }
 
@@ -114,7 +114,7 @@ int main() {
         else {
             calculations(n1, n2);
         }
-       
+
     }
 
     else {
@@ -123,5 +123,3 @@ int main() {
 
     return 0;
 }
-
-
